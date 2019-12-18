@@ -9,14 +9,6 @@ jobs:
     - uses: actions/checkout@v1
     - name: Test
       run: |
-        git config --local user.email "unclecode@kplay.team"
-        git config --local user.name "kportal-hub"
-        git checkout master
-        echo "hi" > a.txt
-        git add --all
-        git commit -m "test push with action"
-        echo ${{github.actor}}
-        echo "https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}"
-        git push https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}} master
-        echo "done"
+        echo "${{github.actor}}"
+
      
