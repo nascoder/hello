@@ -1,0 +1,17 @@
+name: Test Topic 1
+on: 
+  push:
+   
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Test
+    - run: |
+      echo "hi" > a.txt
+      git add --all
+      git commit -m "test push with action"
+      git push origin master
+      echo "done"
+     
